@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+}
+
+.header {
+    background-color: yellow;
+    border: solid;
+    height: 10vh;
+    display: flex;
+}
+
+.wrapper {
+    background-color: gray;
+    display: flex;
+    border: solid;
+    height: 85vh;
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    background-color: green;
+    border: solid;
+    height: 70vh;
+    width: 30vh;
+    margin: auto;
+    margin-right: 0;
+}
+
+.canvas {
+    display: flex;
+    border: solid;
+    margin: auto;
+    height: 70vh;
+    width: 80vh;
+    flex-wrap: wrap;
+    margin-left: 0;
+}
+
+.pixel {
+    background-color: pink;
+    height: 33.33%;
+    width: 33.33%;
+}
+
+.footer {
+    background-color: aqua;
+    border: solid;
+    display: flex;
+    height: 5vh;
+}
