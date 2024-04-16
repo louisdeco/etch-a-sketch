@@ -3,23 +3,28 @@ body {
 }
 
 .header {
-    background-color: yellow;
-    border: solid;
+    background-color: #222831;
     height: 10vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Arial";
+    font-weight: bold;
+    font-size: 30px;
+
 }
 
 .wrapper {
-    background-color: gray;
+    background-color: #393E46;
     display: flex;
-    border: solid;
     height: 85vh;
     margin: 0;
     padding: 0;
 }
 
 .menu {
-    background-color: green;
+    background-color: #00ADB5;
     border: solid;
     height: 70vh;
     width: 30vh;
@@ -44,8 +49,12 @@ body {
 }
 
 .footer {
-    background-color: aqua;
-    border: solid;
+    background-color: #222831;
     display: flex;
     height: 5vh;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Arial";
+    font-size: 12px;
 }
