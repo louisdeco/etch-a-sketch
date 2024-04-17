@@ -21,7 +21,7 @@ function createPixels(size) {
         // pixel.addEventListener("mouseover", () => {
         //     pixel.style.backgroundColor = "pink";
         // });
-        pixel.addEventListener("mouseover", colorHovering(pixel))
+        pixel.addEventListener("mouseover", colorHovering)
         canvas.appendChild(pixel);
     };
 };
@@ -34,6 +34,6 @@ function removeAllChildNodes() {
 };
 
 // Hovering effect
-function colorHovering(pixel) {
-    pixel.style.backgroundColor = "pink";
+function colorHovering(e) {
+    e.target.style.backgroundColor = "pink";
 }
