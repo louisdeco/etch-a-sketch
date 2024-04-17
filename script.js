@@ -2,7 +2,7 @@
 const buttonSizeSelector = document.querySelector("#btn");
 buttonSizeSelector.addEventListener("click", () => {
     // Clean the canvas
-    removeAllChildNodes()
+    removeAllChildNodes();
 
     // Create the canvas
     const userInputValue = +document.querySelector("#size").value;
@@ -16,15 +16,24 @@ function createPixels(size) {
 
     for (let i=0; i<numberOfDivs; i++) {
         let pixel = document.createElement("div");
-        pixel.setAttribute("style", `width: ${sizeOfPixel}%; height: ${sizeOfPixel}; background-color: white`)
-        pixel.classList.add("pixel")
+        pixel.setAttribute("style", `width: ${sizeOfPixel}%; height: ${sizeOfPixel}; background-color: white`);
+        pixel.classList.add("pixel");
+        // pixel.addEventListener("mouseover", () => {
+        //     pixel.style.backgroundColor = "pink";
+        // });
+        pixel.addEventListener("mouseover", colorHovering(pixel))
         canvas.appendChild(pixel);
     };
 };
 
 function removeAllChildNodes() {
-    const parent = document.querySelector("#canvas")
+    const parent = document.querySelector("#canvas");
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
     };
 };
+
+// Hovering effect
+function colorHovering(pixel) {
+    pixel.style.backgroundColor = "pink";
+}
