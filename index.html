@@ -10,26 +10,18 @@
         <div class="wrapper">
             <div class="menu">
                 <div class="selection">
-                    <input type="text" placeholder="Chose the size">
+                    <input id="size" type="text" placeholder="Chose the size">
                     <button id="btn">Select</button>
                 </div>
                 <div class="colorSelector">
                     <div class="text">Pick a color:</div>
-                    <input id ="color" onchange="colorSelected(this)" type="color">
+                    <input id ="color" onchange="colorSelected(this)" type="color" value="#43DA86">
                   </div>
             </div>
-            <div class="canvas">
-                <div class="pixel"></div>
-                <div class="pixel"></div>
-                <div class="pixel"></div>
-                <div class="pixel"></div>
-                <div class="pixel"></div>
-                <div class="pixel"></div>
-                <div class="pixel"></div>
-                <div class="pixel"></div>
-                <div class="pixel"></div>
+            <div id="canvas">
             </div>
         </div>
         <div class="footer">© 2024 - @louisdeco</div>
+        <script src="script.js"></script>
     </body>
 </html>
