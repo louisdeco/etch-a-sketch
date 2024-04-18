@@ -87,7 +87,7 @@ button {
     color: white;
 }
 
-.colorSelector {
+.colorSelector, .rainbowSwitch {
     display: flex;
     justify-content: space-between;
     padding: 10px;
@@ -106,4 +106,62 @@ button {
 #color::-webkit-color-swatch {
     border-radius: 0.25rem;
     border: solid
+}
+
+/* Toogle button */
+
+/* Make the button disappear */
+#check {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+}
+
+#check + label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Style before */
+#check + label::before {
+    content: ""; /* empty string just to show up */
+    width: 2em;
+    height: 1em;
+    background-color: #DDD;
+    border-radius: .45em;
+    transition: 200ms ease-in-out;
+}
+
+/* Style after */
+#check + label::after {
+    position: absolute;
+    content: "";
+    left: .1em;
+    width: .9em;
+    height: .9em;
+    background-color: white;
+    border-radius: .45em;
+    transition: 200ms ease-in-out;
+}
+
+/* Style when checked */
+#check.toggle:checked + label::after {
+    transform: translateX(100%); /* Move to the right */
+    background-color: hsl(90, 80%, 60%);
+}
+
+/* Style before */
+#check.toggle:checked + label::before {
+    content: ""; /* empty string just to show up */
+    width: 2em;
+    height: 1em;
+    background-color: hsl(90, 70%, 90%);
+    border-radius: .45em;
+}
+
+#check.toggle:focus + label::before {
+    outline: 1px solid black;
 }
