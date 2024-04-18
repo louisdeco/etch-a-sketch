@@ -1,3 +1,14 @@
+// Get the color
+let color;
+
+// Updtade the color
+const colorSelector = document.querySelector("#color");
+colorSelector.addEventListener("input", updateFirst);
+
+function updateFirst(e) {
+    color = e.target.value;
+}
+
 // Create the canvas
 const buttonSizeSelector = document.querySelector("#btn");
 buttonSizeSelector.addEventListener("click", () => {
@@ -18,9 +29,6 @@ function createPixels(size) {
         let pixel = document.createElement("div");
         pixel.setAttribute("style", `width: ${sizeOfPixel}%; height: ${sizeOfPixel}; background-color: white`);
         pixel.classList.add("pixel");
-        // pixel.addEventListener("mouseover", () => {
-        //     pixel.style.backgroundColor = "pink";
-        // });
         pixel.addEventListener("mouseover", colorHovering)
         canvas.appendChild(pixel);
     };
@@ -35,5 +43,5 @@ function removeAllChildNodes() {
 
 // Hovering effect
 function colorHovering(e) {
-    e.target.style.backgroundColor = "pink";
+    e.target.style.backgroundColor = color;
 }
