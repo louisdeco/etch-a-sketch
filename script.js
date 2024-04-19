@@ -1,5 +1,5 @@
 // Get the color
-let color;
+let color = "#43DA86";
 
 // Update the color
 const colorSelector = document.querySelector("#color");
